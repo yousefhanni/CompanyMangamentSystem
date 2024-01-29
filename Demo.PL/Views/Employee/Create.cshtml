@@ -1,0 +1,32 @@
+﻿@model EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+
+<h1>Create New Employee</h1>
+
+<br />
+<br />
+@* To sumbit Input contain Files => enctype="multipart/form-data" *@
+
+<form asp-action="Create" enctype="multipart/form-data">
+ 
+
+    <partial name="PartialViews/CreateEditEmployeePartialView" />
+
+
+    <input type="submit" value="submit" class="btn btn-primary" /> |
+    <a asp-action="Index" class="btn btn-light">Back To List </a>
+
+
+
+</form>
+
+@section ValidationScriptSection{
+
+    <partial name="_ValidationScriptsPartial" />
+}
+  
